@@ -1,0 +1,19 @@
+package com.masai.services;
+
+import java.util.List;
+
+import com.masai.model.Transaction;
+import com.masai.model.Wallet;
+
+public class TransactionServiceImpl implements TransactionSevices {
+
+	@Override
+	public List<Transaction> viewAllTransaction(Wallet wallet) {
+		
+		
+		List <Transaction>  transactionList = wallet.getTransactions();
+		
+		return transactionList;
+	}
+
+}
