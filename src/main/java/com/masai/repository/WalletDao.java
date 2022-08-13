@@ -8,6 +8,6 @@ import com.masai.model.Wallet;
 @Repository
 public interface WalletDao extends JpaRepository<Wallet, Integer> {
 	
-	
+
 
 }
