@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.ElementCollection;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -30,11 +31,15 @@ public class Wallet {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer walletid;
   private BigDecimal balance;
+  
+  
  
-// @OneToMany
-// @Embedded
-// @ElementCollection
-// private List<BankAccount> bankaccounts = new ArrayList<BankAccount>();
+ @OneToMany(cascade = CascadeType.ALL)
+ private List<BankAccount> bankaccounts = new ArrayList<BankAccount>();
+ 
+ 
+ 
+ 
 
  @OneToOne(mappedBy = "wallet")
  @JsonIgnore
