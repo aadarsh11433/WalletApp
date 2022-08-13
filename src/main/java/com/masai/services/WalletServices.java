@@ -12,5 +12,7 @@ public interface WalletServices {
 	
    public Customer createAccount(Customer customer); // name,mobilino,balance,password
    
+
    public BigDecimal showBalance(String mobileNo) throws InvalidAccountException;
+
 }
