@@ -9,7 +9,7 @@ import com.masai.model.Wallet;
 @Service
 public interface WalletServices {
 	
-   public Customer createAccount(Customer customer); // name,mobilino,balance,password
+  // public Customer createAccount(Customer customer); // name,mobilino,balance,password
    
    public double showBalance(String mobileNo) throws InvalidAccountException;
  

@@ -12,9 +12,11 @@ import com.masai.model.Customer;
 @Repository
 public interface CustomerDao extends JpaRepository<Customer, Integer> {
     
-	public Optional<Customer> findByMobileNumber(String mobileNo);
+	public Optional<Customer> findByMobileNumber(String mobileNumber);
+	
+	
+	public Optional<Customer> findByMobileNumberAndPassword(String mobileNumber, String password);
 	
 
-	public Optional<Customer> findByMobileNumberAndPassword(String mobileNumber, String password);
 	
 }

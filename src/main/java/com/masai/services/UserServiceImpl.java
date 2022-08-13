@@ -52,7 +52,7 @@ Optional<Customer> optCustomer = cDao.findByMobileNumber(mobileNumber);
 	public Customer updateCustomer(Customer customer) {
 		// TODO Auto-generated method stub
 		
-		Optional<Customer> existingCustomer = cDao.findById(customer.getCid());
+		Optional<Customer> existingCustomer = cDao.findById(customer.getCustomerId());
 		
 		Customer c = existingCustomer.get();
 		

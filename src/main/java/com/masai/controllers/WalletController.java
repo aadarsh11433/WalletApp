@@ -29,12 +29,12 @@ public class WalletController {
   @Autowired
   private UserService uService;
 	
-	@PostMapping("/createaccount")
-	public Customer createAccountHandler(@RequestBody Customer customer) {
-		
-		return wService.createAccount(customer);
-		
-	}
+//	@PostMapping("/createaccount")
+//	public Customer createAccountHandler(@RequestBody Customer customer) {
+//		
+//		return wService.createAccount(customer);
+//		
+//	}
 	
    
 	@GetMapping("/balance/{mobileNumber}")

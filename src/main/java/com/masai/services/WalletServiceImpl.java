@@ -29,21 +29,21 @@ public class WalletServiceImpl implements WalletServices{
 	BankAccountDao bDao;
 	
 	
-	
-	@Override
-	public Customer createAccount(Customer customer) {
-	     
-		
-		//check wallet exist or not
-		
-		Wallet saveWallet = customer.getWallet();
-	
-	
-	    wDao.save(saveWallet);
-		
-		return cDao.save(customer);
-		
-	}
+//	
+//	@Override
+//	public Customer createAccount(Customer customer) {
+//	     
+//		
+//		//check wallet exist or not
+//		
+//		Wallet saveWallet = customer.getWallet();
+//	
+//	
+//	    wDao.save(saveWallet);
+//		
+//		return cDao.save(customer);
+//		
+//	}
 
   
 	@Override
