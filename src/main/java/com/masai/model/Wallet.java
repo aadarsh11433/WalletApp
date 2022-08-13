@@ -34,10 +34,10 @@ public class Wallet {
   private Integer walletid;
   private double balance;
  
- @OneToMany(cascade = CascadeType.ALL)
+ @OneToMany(cascade = CascadeType.ALL,mappedBy = "wallet")
  private List<BankAccount> bankaccounts = new ArrayList<BankAccount>();
 
- @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+ @OneToOne(cascade = CascadeType.ALL)
 // @JsonIgnore
 // @JoinColumn(name = "customer_id",referencedColumnName = "cid")
  private Customer customer;

@@ -1,5 +1,6 @@
 package com.masai.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,6 +31,10 @@ public class BankAccount {
 	private String bankname;
 	private double balance;
 	
+	
+	@JsonIgnore
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Wallet wallet;
 	
 	
 	
