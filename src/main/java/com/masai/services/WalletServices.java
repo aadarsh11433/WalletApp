@@ -8,4 +8,6 @@ import com.masai.model.Customer;
 public interface WalletServices {
 	
    public Customer createAccount(Customer customer); // name,mobilino,balance,password
+   
+   
 }
