@@ -32,6 +32,8 @@ public class AccountServicesImpl implements AccountServices {
 		
 		Optional<Customer> optCustomer =  Optional.ofNullable(uService.validateUser(mobileNumber, password));
 		
+		
+		
 		List<BankAccount> bankaccounts = optCustomer.get().getWallet().getBankaccounts();
 		
 		
@@ -60,11 +62,6 @@ public class AccountServicesImpl implements AccountServices {
 		return bank;
 	}
 
-
-
-
-
-	
 	
 	
 	@Override
