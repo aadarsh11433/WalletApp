@@ -38,7 +38,8 @@ public class Wallet {
  private List<BankAccount> bankaccounts = new ArrayList<BankAccount>();
  
  
- 
+ @OneToMany
+ private List<Benificiary> benificiaries = new ArrayList<Benificiary>();
  
 
  @OneToMany
