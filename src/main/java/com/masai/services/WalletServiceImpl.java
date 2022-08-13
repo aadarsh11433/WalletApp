@@ -1,14 +1,12 @@
 package com.masai.services;
 
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.masai.exceptions.InvalidAccountException;
-import com.masai.model.BankAccount;
 import com.masai.model.Customer;
 import com.masai.model.Wallet;
 import com.masai.repository.BankAccountDao;
@@ -30,18 +28,9 @@ public class WalletServiceImpl implements WalletServices{
 	public Customer createAccount(Customer customer) {
 	     
 		Wallet saveWallet = customer.getWallet();
-		
-	
-		
-//	   List<BankAccount> listbanks = saveWallet.getBankaccounts();
-//		
-//	   for(BankAccount bac:listbanks) {
-//		    saveWallet.getBankaccounts().add(bac);
-//		    bDao.save(bac);
-//	   }
 	
 	    wDao.save(saveWallet);
-		
+	    
 		return cDao.save(customer);
 		
 	}
