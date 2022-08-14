@@ -10,4 +10,5 @@ public class Springbootwalletapp1Application {
 		SpringApplication.run(Springbootwalletapp1Application.class, args);
 	}
 
+	
 }

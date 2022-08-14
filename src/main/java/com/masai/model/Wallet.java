@@ -41,6 +41,10 @@ public class Wallet {
  
  
 
+ @OneToMany
+ private List<Transaction> transactions = new ArrayList<Transaction>();
+
+ 
  @OneToOne(mappedBy = "wallet")
  @JsonIgnore
  @JoinColumn(name = "customer_id",referencedColumnName = "cid")
